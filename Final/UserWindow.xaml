@@ -39,7 +39,7 @@
             <TextBox x:Name="txtNewFileName" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="95" Width="221" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20"/>
             <Button x:Name="btnSaveNewCSV" Content="Save" Canvas.Left="78" Canvas.Top="139" HorizontalAlignment="Center" VerticalAlignment="Top" Width="130" FontSize="20" Click="btnSaveNewCSV_Click"/>
         </Canvas>
-        <Button x:Name="btnLogOut" Content="Log Out" Canvas.Left="381" Canvas.Top="10" HorizontalAlignment="Center" VerticalAlignment="Top" Width="98"/>
+        <Button x:Name="btnSaveTransactions" Content="Save Transactions" Canvas.Left="306" Canvas.Top="10" HorizontalAlignment="Left" VerticalAlignment="Center" Width="173" Click="btnSaveTransactions_Click"/>
 
     </Canvas>
 </Window>

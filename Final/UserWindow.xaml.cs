@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassLibrary;
+using CsvHelper;
 
 namespace Final
 {
@@ -26,8 +28,9 @@ namespace Final
         {
             InitializeComponent();
             DisplayCurrentUser();
-            DisplayUserTransactions();
             CreateNewFile(Data.UsersTransactions());
+            ReadTransactions();
+            DisplayUserTransactions();
         }
 
         // Provided Code
@@ -79,17 +82,45 @@ namespace Final
 
         private void btnSaveNewCSV_Click(object sender, RoutedEventArgs e)
         {
-
+            string filePath = txtNewFileName.Text + ".csv";
+            WriteTransactions(filePath);
         }
 
         // Updates the listview
         public void UpdateListView()
         {
             lvUserTransactions.Items.Refresh();
-        } 
+        }
+        // When called saves transaction list to the users csv
+        public void WriteTransactions(string filePath)
+        {
+            CultureInfo ci = CultureInfo.InvariantCulture;
 
-        //    public void WriteTransactions(string filePath) // When called saves transaction list to the users csv
+            using (var stream = File.Open(filePath, FileMode.OpenOrCreate))
+            using (var writer = new StreamWriter(stream))
+            using (var csvWriter = new CsvWriter(writer, ci))
+            {
+                // .WriteRecords(list);
+                csvWriter.WriteRecords(transactions);
+                writer.Flush();
+            }
+        }
 
-        //    public void ReadTransactions() // Loads the users specific csv
+        // Loads the users specific csv
+        public void ReadTransactions()
+        {
+            using (StreamReader sr = new StreamReader(Data.UsersTransactions()))
+            using (CsvReader csv = new CsvReader(sr, CultureInfo.InvariantCulture))
+            {
+                transactions = csv.GetRecords<Transaction>().ToList();
+            }
+        }
+
+        // Saves user list to CSV and closes window
+
+private void btnSaveTransactions_Click(object sender, RoutedEventArgs e)
+        {
+            WriteTransactions(Data.UsersTransactions());
+        }
     }
-    }
+}
