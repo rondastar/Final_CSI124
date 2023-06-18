@@ -23,6 +23,7 @@ namespace Final
         public AdminWindow()
         {
             InitializeComponent();
+            DisplayCurrentUserLabel();
             PreloadComboBox();
             UpdateLVUser();
         }
@@ -52,6 +53,10 @@ namespace Final
         {
             lvDisplayUsers.ItemsSource = Data.accounts;
 
+        }
+        void DisplayCurrentUserLabel()
+        {
+            lblCurrentUser.Content = $"Current User: {Data.currentUser.Name}";
         }
     }
 }

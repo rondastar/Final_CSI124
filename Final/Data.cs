@@ -21,7 +21,7 @@ namespace Final
         public static string userInformation = "users.json";
         static string TransactionExtension = "_transaction.csv";
 
-        // Use a static constructor to load the accounts list ( make sure a file exist before you try to load )
+        // Use a static constructor to load the accounts list ( make sure a file exists before you try to load )
         static Data()
         {
             ReadUsers();

@@ -36,7 +36,7 @@ namespace ClassLibrary
 
         // Methods
 
-        // Used for login ********************NOT SURE WHY WE NEED THIS***************************
+        // Used for login 
         public bool IsUser(string userName)
         {
             if(_userName == userName)

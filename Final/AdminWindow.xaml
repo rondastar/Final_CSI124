@@ -10,8 +10,8 @@
         <ListView x:Name="lvDisplayUsers" Height="355" Width="413" ItemsSource="{Binding Path=Data.accounts}" Canvas.Left="377" Canvas.Top="47" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="105" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
-                    <GridViewColumn Width="105" Header="Username" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Width="100" Header="Username" DisplayMemberBinding="{Binding UserName}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Password" DisplayMemberBinding="{Binding Password}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Role" DisplayMemberBinding="{Binding UserRole}"></GridViewColumn>
 
@@ -30,7 +30,7 @@
             <ComboBox x:Name="cbRoles" Canvas.Left="106" Canvas.Top="228" Width="212" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Button x:Name="btnAddUser" Content="Add User" Canvas.Left="137" Canvas.Top="283" HorizontalAlignment="Center" VerticalAlignment="Top" Width="106" Height="34" FontSize="20" Click="btnAddUser_Click"/>
         </Canvas>
-        <Label Content="Current User: " Canvas.Left="23" Canvas.Top="9" FontSize="20" Foreground="White"/>
+        <Label x:Name="lblCurrentUser" Content="" Canvas.Left="23" Canvas.Top="9" FontSize="20" Foreground="White"/>
 
     </Canvas>
 </Window>

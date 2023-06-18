@@ -27,7 +27,6 @@ namespace Final
         {
             InitializeComponent();
             //Data.Preload();
-            //MessageBox.Show(Data.accounts.Count.ToString());
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
