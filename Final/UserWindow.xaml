@@ -11,7 +11,7 @@
         <ListView x:Name="lvUserTransactions" Height="322" Width="464" ItemsSource="{Binding Path=transactions}" Canvas.Left="15" Canvas.Top="90" HorizontalAlignment="Center" VerticalAlignment="Top">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="160" Header="Transaction Time" DisplayMemberBinding="{Binding TransactionTime}"></GridViewColumn>
+                    <GridViewColumn Width="165" Header="Transaction Time" DisplayMemberBinding="{Binding TransactionTime}"></GridViewColumn>
                     <GridViewColumn Width="100" Header="Item Name" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
                     <GridViewColumn Width="60" Header="Price" DisplayMemberBinding="{Binding Price}"></GridViewColumn>
                     <GridViewColumn Width="60" Header="Tax" DisplayMemberBinding="{Binding Tax}"></GridViewColumn>

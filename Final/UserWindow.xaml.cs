@@ -50,18 +50,21 @@ namespace Final
         private void btnSortName_Click(object sender, RoutedEventArgs e)
         {
             transactions.Sort();
+            UpdateListView();
         }
 
         private void btnSortTime_Click(object sender, RoutedEventArgs e)
         {
             Transaction_Sort_Time tst = new Transaction_Sort_Time();
             transactions.Sort(tst);
+            UpdateListView();
         }
 
         private void btnSortPrice_Click(object sender, RoutedEventArgs e)
         {
             Transaction_Sort_Price tsp = new Transaction_Sort_Price();
             transactions.Sort(tsp);
+            UpdateListView();
         }
 
         private void btnAddItem_Click(object sender, RoutedEventArgs e)
@@ -78,6 +81,7 @@ namespace Final
         {
 
         }
+
         // Updates the listview
         public void UpdateListView()
         {
