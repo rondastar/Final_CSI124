@@ -29,8 +29,9 @@
             <Label Content="Item Name:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Width="127" Canvas.Left="7"/>
             <TextBox x:Name="txtItemName" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="37" Width="269" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <Label Content="Price:" FontSize="20" Width="127" Canvas.Left="7" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="73"/>
-            <TextBox x:Name="txtItemPrice" Canvas.Left="7" TextWrapping="Wrap" Canvas.Top="110" Width="269" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtItemPrice" Canvas.Left="32" TextWrapping="Wrap" Canvas.Top="110" Width="244" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button x:Name="btnAddItem" Content="Add Item" Canvas.Left="74" Canvas.Top="150" HorizontalAlignment="Left" VerticalAlignment="Center" Width="136" FontSize="20" Click="btnAddItem_Click"/>
+            <Label Content="$" FontSize="20" Width="22" Canvas.Left="10" Canvas.Top="106" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Canvas>
         <Canvas Height="198" Width="286" Background="#FF8DA386" Canvas.Left="495" Canvas.Top="214" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label Content="Save List as New CSV File" Canvas.Left="10" Canvas.Top="10" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>

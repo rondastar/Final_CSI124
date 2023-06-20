@@ -75,9 +75,17 @@ namespace Final
             string itemName = txtItemName.Text;
             string userItemPrice = txtItemPrice.Text;
             
-            Decimal.TryParse(userItemPrice, out decimal itemPrice);
-            transactions.Add(new Transaction(itemName, itemPrice));
-            UpdateListView();
+            if(itemName != "" && userItemPrice != "")
+            {
+                Decimal.TryParse(userItemPrice, out decimal itemPrice);
+                transactions.Add(new Transaction(itemName, itemPrice));
+                UpdateListView();
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid item name and price.");
+            }
+            
         }
 
         private void btnSaveNewCSV_Click(object sender, RoutedEventArgs e)
