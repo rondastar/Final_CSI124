@@ -90,8 +90,15 @@ namespace Final
 
         private void btnSaveNewCSV_Click(object sender, RoutedEventArgs e)
         {
-            string filePath = txtNewFileName.Text + ".csv";
-            WriteTransactions(filePath);
+            if (txtItemName.Text != "")
+            {
+                string filePath = txtNewFileName.Text + ".csv";
+                WriteTransactions(filePath);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a file name.");
+            }
         }
 
         // Updates the listview

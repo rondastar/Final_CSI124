@@ -14,7 +14,7 @@ namespace Final
 {
     internal class Data
     {
-        public static UserAccount currentUser;
+        public static UserAccount? currentUser;
 
         public static List<UserAccount> accounts = new List<UserAccount>();
 
