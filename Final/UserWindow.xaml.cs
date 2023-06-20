@@ -44,7 +44,7 @@ namespace Final
 
         void DisplayCurrentUser()
         {
-            lblCurrentUser.Content = $"Current User: {Data.currentUser.Name}";
+            lblCurrentUser.Content = $"User: {Data.currentUser.Name}";
         }
         void DisplayUserTransactions()
         {
@@ -121,6 +121,11 @@ namespace Final
 private void btnSaveTransactions_Click(object sender, RoutedEventArgs e)
         {
             WriteTransactions(Data.UsersTransactions());
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Data.currentUser = null;
         }
     }
 }
